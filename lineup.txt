@@ -1,0 +1,49 @@
+//Lineuo file is a two dimensional array with size of #ofNodes x (#ofLevels+1)*2.
+//Each row represents a node in the Skip Graph. First two elements of a row are
+//nameID and numericalID of the node. Pair of remaining elements in the row 
+//(lineup[node][2-3],lineup[node][4-5] …) declares its left and right neighbors at each level.
+
+//First row defines a node with nameID and numericalID of “000” and “12”, respectively.
+//At level 0,1 and 2, it does not have a left neighbor, because they are denoted by 0.
+//At level 0, the node has a right neighbor with numericalID of “28”. At level 1 and 2, the node has
+//right neighbors with numericalIDs of “39”. 
+000 12 0 28 0 39 0 39
+
+//Second row defines a node with nameID and numericalID of “100” and “28”, respectively.
+//At level 0, the node has left neighbor with numericalID of “12”, and right neighbor with numericalID of “39”.
+//At level 1, the node has a right neighbor with numericalID of “71”, and it does not have a left neighbor.
+//At level 2, the node does not have any left and right neighbors. 
+100 28 12 39 0 71 0 0
+
+//Third row defines a node with nameID and numericalID of “001” and “39”, respectively.
+//At level 0, the node has left neighbor with numericalID of “28”, and right neighbor with numericalID of “48”.
+//At level 1, the node has left neighbor with numericalID of “12”, and right neighbor with numericalID of “48”.
+//At level 2, the node has left neighbor with numericalID of “12”, and it does not have a right neighbor.
+001 39 28 48 12 48 12 0
+
+//Forth row defines a node with nameID and numericalID of “010” and “48”, respectively.
+//At level 0, the node has left neighbor with numericalID of “39”, and right neighbor with numericalID of “55”.
+//At level 1, the node has left neighbor with numericalID of “39”, and right neighbor with numericalID of “55”.
+//At level 2, the node does not have a left neighbor, and it has a right neighbor with numericalID of “55”.
+010 48 39 55 39 55 0 55
+
+//Fifth row defines a node with nameID and numericalID of “011” and “55”, respectively.
+//At level 0, the node has left neighbor with numericalID of “48”, and right neighbor with numericalID of “71”.
+//At level 1, the node has left neighbor with numericalID of “48”, and it does not have a right neighbor.
+//At level 2, the node has left neighbor with numericalID of “48”, and it does not have a right neighbor.
+011 55 48 71 48 0 48 0
+
+
+//Sixth row defines a node with nameID and numericalID of “110” and “71”, respectively.
+//At level 0, the node has left neighbor with numericalID of “55”, and right neighbor with numericalID of “99”.
+//At level 1, the node has left neighbor with numericalID of “28”, and right neighbor with numericalID of “99”.
+//At level 2, the node does not have a left neighbor, and it has a right neighbor with numericalID of “99”.
+110 71 55 99 28 99 0 99
+
+
+//Seventh row defines a node with nameID and numericalID of “111” and “99”, respectively.
+//At level 0, the node has left neighbor with numericalID of “71”, and it does not have a right neighbor.
+//At level 1, the node has left neighbor with numericalID of “71”, and it does not have a right neighbor.
+//At level 2, the node has left neighbor with numericalID of “71”, and it does not have a right neighbor.
+111 99 71 0 71 0 71 0
+
