@@ -1,2 +1,2 @@
-# Skip_Graph_Visualizer
-Visualizer project of Skip Graphs, collaboration with ugrades at KU
+**Important note**: this repository has been archieved. Please refer to [p2pseala/skipvis](https://github.com/p2pseala/skipvis) for the stable version. 
+
